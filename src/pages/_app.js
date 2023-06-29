@@ -16,10 +16,34 @@ export default function App({Component, pageProps}) {
     <MantineProvider
       withGlobalStyles
       withNormalizeCSS
-      // theme={{
-      //   /** Put your mantine theme override here */
-      //   colorScheme: 'light',
-      // }}
+      theme={{
+        /** Put your mantine theme override here */
+        // colorScheme: 'dark',
+        colors: {
+          x2: ["#222222"]
+        }
+
+        // components:{
+        //   Drawer:{
+        //     body:{
+        //       backgroundColor:"red",
+        //       color:"red"
+        //     },
+        //
+        //     closeButton:{
+        //       backgroundColor:"red",
+        //       color:"red"
+        //     },
+        //     header: { color: 'red' },
+        //
+        //     backgroundColor:"#222222"
+        //   },
+        //   Button:{
+        //
+        //   }
+        // }
+
+      }}
     >
       <Component {...pageProps} />
     </MantineProvider>
