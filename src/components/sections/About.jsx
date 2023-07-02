@@ -6,7 +6,8 @@ const About = () => {
   return (
     <>
       <div className="container relative ">
-        <div id={"about_me"} className={"flex w-full relative justify-between items-center py-[60px] z-10"}>
+        <a id={"about_me"} className="anchor"/>
+        <div className={"flex w-full relative justify-between items-center py-[60px] z-10"}>
           <div className="photo">
             <Image height={534} width={360} withPlaceholder src='./aboutPhoto.png' alt="Main Photo"/>
           </div>
@@ -28,7 +29,7 @@ const About = () => {
 
 
         </div>
-        <div className="absolute -right-[500px] top-[40px] animate-[spin_40s_linear_infinite] -z-1">
+        <div className="absolute -right-[500px] top-[40px] animate-[spin_40s_linear_infinite] z-[0]">
           <Image height={660} width={660} withPlaceholder src='./animateCircle.png' alt="animation"/>
         </div>
       </div>

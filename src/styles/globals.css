@@ -21,8 +21,55 @@
     .infoText {
         @apply text-s18 font-[300]
     }
-    .container{
+
+    .container {
         @apply max-w-[1000px] mx-auto
+    }
+
+    .anchor {
+        display: block;
+        position: relative;
+        top: -130px;
+        visibility: hidden;
+    }
+
+    .title {
+        line-height: 36px;
+        font-size: 36px;
+        font-weight: 300;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .sub-title {
+        text-align: center;
+        line-height: 25px;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 45px;
+    }
+    .remark{
+        line-height: 19px;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .reviews-title_wrapper {
+        position: relative;
+    }
+    .reviews-title_wrapper:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -310px;
+        background-image: url('/reviewsTop.png');
+        background-position: left;
+        width: 300px;
+        height: 222px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 0;
+
     }
 }
 

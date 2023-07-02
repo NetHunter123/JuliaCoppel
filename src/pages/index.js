@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import SideMenu from "@/components/SideMenu";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
+import Services from "@/components/sections/Services";
+import Reviews from "@/components/sections/Reviews";
 
 const montserrat = Montserrat({subsets: ['cyrillic']})
 
@@ -20,9 +22,13 @@ export default function Home() {
         <div className="h-[130px]"></div>
         <main
           // className={`flex min-h-screen flex-col items-center justify-between p-24 ${montserrat.className}`}
+          className={"overflow-hidden"}
         >
           <Hero/>
           <About/>
+          <Services/>
+          <p className="remark py-[20px]">*The outcome may vary from case to case</p>
+          <Reviews/>
         </main>
         <div className="h-[100vh]"></div>
         <div className="h-[100vh]"></div>
