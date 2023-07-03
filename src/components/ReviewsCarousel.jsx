@@ -67,14 +67,13 @@ export default function ReviewsCarousel() {
 
       }}
     >
-      {data.map((item) => <>
-          <Carousel.Slide>
+      {data.map((item) =><Carousel.Slide key={item.text}>
             <div className="bg-[#220] w-full h-[200px]">
               {item.text}
             </div>
           </Carousel.Slide>
 
-        </>
+
       )}
     </Carousel>
   );

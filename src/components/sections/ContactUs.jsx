@@ -41,11 +41,9 @@ const ContactUs = () => {
             </div>
             <div className="btns ">
               {cantacts.map((btn) => {
-                return <>
-                   <div className={"inline-block mb-[30px]"}  key={btn.text}>
+                return <div className={"inline-block mb-[30px]"}  key={btn.text}>
                   <ContactButton text={btn.text} link={btn.link} icon={btn.icon}/>
                   </div>
-                </>
               })}
 
             </div>

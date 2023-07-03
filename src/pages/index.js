@@ -22,7 +22,7 @@ export default function Home() {
             <Header/>
           </div>
         </div>
-        <div className="h-[10px] md:h-[130px] "></div>
+        <div className="h-[43px] md:h-[130px] "></div>
         <main
           // className={`flex min-h-screen flex-col items-center justify-between p-24 ${montserrat.className}`}
           className={"overflow-hidden"}
