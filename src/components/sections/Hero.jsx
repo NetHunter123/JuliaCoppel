@@ -14,7 +14,7 @@ const Hero = () => {
               нестандартных навыков решения проблем.</p>
             <p className={"infoText font-bold mb-[40px]"}>Запишитесь на консультацию!</p>
             <div className="info__btn flex gap-[40px] mb-[60px]">
-              <Button className={"p-[60px]"} text={"Связаться со мной"} link={"touch"} place={"hero"}/>
+              <Button className={"p-[60px]"} text={"Связаться со мной"} link={"contacts"} place={"hero"}/>
               <Button text={"Услуги"} link={"Services"} variant={"outline"} place={"hero"}/>
             </div>
           </div>

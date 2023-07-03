@@ -6,6 +6,7 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
 import Reviews from "@/components/sections/Reviews";
+import ContactUs from "@/components/sections/ContactUs";
 
 const montserrat = Montserrat({subsets: ['cyrillic']})
 
@@ -25,13 +26,14 @@ export default function Home() {
           className={"overflow-hidden"}
         >
           <Hero/>
+          <ContactUs/>
           <About/>
           <Services/>
           <p className="remark py-[20px]">*The outcome may vary from case to case</p>
           <Reviews/>
+
         </main>
-        <div className="h-[100vh]"></div>
-        <div className="h-[100vh]"></div>
+        {/*<footer className="text-center py-2 text-[14px]">©Developed by Vittorio</footer>*/}
       </div>
     </>
   )

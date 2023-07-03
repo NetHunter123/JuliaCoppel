@@ -23,7 +23,7 @@ const Header = () => {
         <div className="relative w-fit flex">
           <Nav/>
           <div className=" lg:absolute right-[-200px] xl:right-[-235px] ">
-            <Button text={"Get in touch"} link={"touch"}/>
+            <Button text={"Связаться со мной"} link={"contacts"}/>
           </div>
         </div>
     </header>

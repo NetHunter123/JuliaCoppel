@@ -4,10 +4,10 @@ import Link from "next/link";
 const Nav = ({row = true,}) => {
 
   const links = [
-    {title: "About me", path: "#about_me"},
-    {title: "Services", path: "#services"},
-    {title: "Reviews", path: "#reviews"},
-    {title: "Contacts", path: "#contacts"},
+    {title: "Про меня", path: "#about_me"},
+    {title: "Услуги", path: "#services"},
+    {title: "Отзывы", path: "#reviews"},
+    {title: "Контакты", path: "#contacts"},
   ]
   return (
     // <div className={"absolute left-0 right-0"}>
