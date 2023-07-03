@@ -14,7 +14,7 @@ const Nav = ({row = true,}) => {
     //   <nav className={"mx-auto w-fit"}>
       <nav className={"w-fit "}>
         {links.map((link) =>
-          <a className={"inline-block h-[50px] leading-[50px] px-[26px]"} key={link.path}
+          <a className={"inline-block h-[50px] leading-[50px] md:px-[18px] lg:px-[23px] xl:px-[26px]"} key={link.path}
              href={link.path}>{link.title}</a>)}
       </nav>
   );

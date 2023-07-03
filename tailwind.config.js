@@ -1,5 +1,5 @@
-const {Montserrat} = require("next/font/google");
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 
 module.exports = {
@@ -12,6 +12,12 @@ module.exports = {
     extend: {
       height: {
         btn: '50px',
+      },
+      screens: {
+        ...defaultTheme.screens,
+        'xs': '475px',
+        // lg:'1030px',
+        "xl":'1140px'
       },
       colors:{
         primary: "#C98D4E",

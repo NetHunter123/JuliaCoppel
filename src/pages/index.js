@@ -13,14 +13,16 @@ const montserrat = Montserrat({subsets: ['cyrillic']})
 export default function Home() {
   return (
     <>
-      <div className={`bg-bgDark text-primary min-h-screen px-[15px] ${montserrat.className}`}>
+      <div className={`bg-bgDark text-primary min-h-screen  ${montserrat.className}`}>
         <div className="fixed top-0 left-0 right-0 bg-bgDark z-20">
-          <div className="fixed right-[10px] top-[10px] ">
+          <div className="fixed right-[10px]  top-[10px] md:hidden ">
             <SideMenu/>
           </div>
-          <Header/>
+          <div className="hidden md:block">
+            <Header/>
+          </div>
         </div>
-        <div className="h-[130px]"></div>
+        <div className="h-[10px] md:h-[130px] "></div>
         <main
           // className={`flex min-h-screen flex-col items-center justify-between p-24 ${montserrat.className}`}
           className={"overflow-hidden"}
