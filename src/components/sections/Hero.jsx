@@ -21,7 +21,7 @@ const Hero = () => {
             <p className={"infoText max-[768px]:text-center text-[16px] lg:text-[18px] whitespace-pre-wrap max-w-[431px] w-full"}>Преодолевать трудности с помощью моих
               нестандартных навыков решения проблем.</p>
             <p className={"infoText max-[768px]:mb-5 text-[16px] lg:text-[18px] font-bold md:mb-[20px] lg:mb-[40px]"}>Запишитесь на консультацию!</p>
-            <div className="info__btn flex  gap-[20px] lg:gap-[40px] mb-[60px]">
+            <div className="info__btn flex  gap-[20px] lg:gap-[40px] max-md:mb-0 mb-[60px]">
               <Button className={"p-[60px]"} text={"Связаться со мной"} link={"contacts"} place={"hero"}/>
               <Button text={"Услуги"} link={"Services"} variant={"outline"} place={"hero"}/>
             </div>

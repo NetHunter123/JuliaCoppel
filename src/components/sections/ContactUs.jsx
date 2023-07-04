@@ -2,9 +2,12 @@ import React from 'react';
 import {Image, Button, rem} from "@mantine/core";
 import {IconBrandInstagram, IconBrandTelegram, IconBrandWhatsapp, IconBrandFacebook} from '@tabler/icons-react';
 import ContactButton from "@/components/ContactButton";
+import useMediaQueries from "@/utils/useMediaQueries";
 
 
 const ContactUs = () => {
+  const md = useMediaQueries("md")
+  const lg = useMediaQueries("lg")
   const cantacts = [{
     text: "Instagram", link: "#",
     icon: <IconBrandInstagram strokeWidth={1.7} size={rem(40)}/>
@@ -26,22 +29,22 @@ const ContactUs = () => {
     <>
       <div className="container relative">
         <a id={"contacts"} className="anchor"/>
-        <div className={"flex w-full relative justify-between items-center py-[60px] z-10"}>
-          <div className="photo">
-            <Image height={500} width={360} withPlaceholder src='./contactUs.png' alt="Main Photo"/>
+        <div className={"flex w-full relative justify-center max-md:flex-col md:justify-between items-center py-[60px] z-10"}>
+          <div className="photo mr-[30px] max-md:mr-0 max-md:order-1">
+            <Image width={lg?360:md?314:300} withPlaceholder src='./contactUs.png' alt="Main Photo"/>
           </div>
 
-          <div className="info max-w-[450px]">
-            <div className="text-left mb-[35px]">
-              <h3 className="title relative z-10 text-left">Contacts</h3>
+          <div className="info max-w-[450px] max-md:flex max-md:flex-col max-md:items-center">
+            <div className="text-left max-md:text-center max-lg:mb-[15px] mb-[35px]">
+              <h3 className="title relative z-10 text-left max-md:mb-[20px] max-md:text-center">Contacts</h3>
               <p className="sub-title relative z-20 text-left mb-0">Tired of looking for a way out of the vicious
                 circle?
               </p>
               <p className={"infoText font-bold"}>Пишите Юлии, она поможет!</p>
             </div>
-            <div className="btns ">
+            <div className="btns max-md:flex max-md:flex-col">
               {cantacts.map((btn) => {
-                return <div className={"inline-block mb-[30px]"}  key={btn.text}>
+                return <div className={"inline-block max-lg:mb-[20px] mb-[30px]"}  key={btn.text}>
                   <ContactButton text={btn.text} link={btn.link} icon={btn.icon}/>
                   </div>
               })}

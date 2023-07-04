@@ -1,12 +1,15 @@
 import React from 'react';
 import {Accordion, rem} from '@mantine/core';
 import {IconPlus} from '@tabler/icons-react';
+import useMediaQueries from "@/utils/useMediaQueries";
 
 
 const AccordionServices = () => {
+  const md = useMediaQueries("md")
+  const lg = useMediaQueries("lg")
   return (
     <Accordion
-      chevron={<IconPlus size="1rem"/>}
+      chevron={<IconPlus size="2rem"/>}
       styles={{
         root: {
           borderTop: `${rem(1)} solid #C98D4E`,
@@ -17,6 +20,7 @@ const AccordionServices = () => {
           },
         },
         control: {
+          padding: ` ${!md ? "0 10px" : " 0 16px 0 20px"}`,
           color: "#C98D4E",
           '&:hover': {
             backgroundColor: '#111',
@@ -151,12 +155,15 @@ const AccordionServices = () => {
       <Accordion.Item value="wedding">
         <Accordion.Control>🔮 ЛЮБОВНЫЙ ПРИВОРОТ НА СВАДЬБУ В ЧЕРНОЙ ЦЕРКВИ 🔮</Accordion.Control>
         <Accordion.Panel>
-          <p className={"mb-[25px]"}>Он соединяет человеческие сердца и судьбы. После любовного приворота заказчик и околдованный начинают жить
+          <p className={"mb-[25px]"}>Он соединяет человеческие сердца и судьбы. После любовного приворота заказчик и
+            околдованный начинают жить
             одной жизнью. В доме у них всегда будет тепло и уют, а в сердцах - страсть и любовь друг к другу.
           </p>
-          <p className={"mb-[25px]"}>Любовь, созданная с помощью этого любовного приворота, неподвластна времени. Спустя годы люди продолжают
+          <p className={"mb-[25px]"}>Любовь, созданная с помощью этого любовного приворота, неподвластна времени. Спустя
+            годы люди продолжают
             любить сильнее прежнего, уважать и ценить друг друга.</p>
-          <p className={"mb-[25px]"}>За любовный приворот, сделанный на любимого человека, клиенту не придется платить в будущем. Такой любовный
+          <p className={"mb-[25px]"}>За любовный приворот, сделанный на любимого человека, клиенту не придется платить в
+            будущем. Такой любовный
             приворот не имеет плохих последствий, так как я всегда делаю отливки против негатива.</p>
           <p className={"mb-[25px]"}>Воспользоваться этим может даже глубоко религиозный и крещеный человек.</p>
           <p className={"mb-[25px]"}>Сохраните свою любовь 😌</p>
@@ -164,9 +171,11 @@ const AccordionServices = () => {
       </Accordion.Item>
       <Accordion.Item value="crossing">
         <Accordion.Control>🪢CROSSING OF FATE🪢</Accordion.Control>
-        <Accordion.Panel>😌 Sometimes a person is not able to attract love in the usual way, so he resorts to the help of higher powers.
+        <Accordion.Panel>😌 Sometimes a person is not able to attract love in the usual way, so he resorts to the help of
+          higher powers.
           ⠀
-          The crossing of fate strengthens already begun relationships, helps to attract love and keep it for a long time‼️
+          The crossing of fate strengthens already begun relationships, helps to attract love and keep it for a long
+          time‼️
           ⠀
           ""Crossing of Fates"" is a change in the fate of you and your chosen one!
           ⠀
