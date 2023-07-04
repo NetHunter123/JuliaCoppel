@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 
-const Nav = ({row = true,}) => {
+const Nav = ({row = true, close=()=>{}}) => {
 
   const links = [
     {title: "Про меня", path: "#about_me"},
@@ -10,13 +10,14 @@ const Nav = ({row = true,}) => {
     {title: "Контакты", path: "#contacts"},
   ]
   return (
-    // <div className={"absolute left-0 right-0"}>
-    //   <nav className={"mx-auto w-fit"}>
-      <nav className={"w-fit "}>
-        {links.map((link) =>
-          <a className={"inline-block h-[50px] leading-[50px] md:px-[18px] lg:px-[23px] xl:px-[26px]"} key={link.path}
-             href={link.path}>{link.title}</a>)}
-      </nav>
+    <nav className={`w-fit ${row ? "" : "flex flex-col"}`}>
+      {links.map((link) =>
+        <a
+          className={`${row ? "" : "text-primary text-[20px]"} inline-block h-[50px] leading-[50px] md:px-[18px] lg:px-[23px] xl:px-[26px]`}
+          key={link.path}
+          onClick={close}
+          href={link.path}>{link.title}</a>)}
+    </nav>
   );
 };
 

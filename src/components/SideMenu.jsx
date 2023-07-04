@@ -2,8 +2,10 @@ import React from 'react';
 import {Drawer, Button, createStyles, Burger} from "@mantine/core";
 import {useDisclosure} from "@mantine/hooks";
 import {theme} from "../../tailwind.config";
+import Nav from "@/components/Nav";
+import ContactButton from "@/components/ContactButton";
 
-const SideMenu = () => {
+const SideMenu = ({contacts}) => {
   const [opened, {open, close}] = useDisclosure(false);
   // const useStyles = createStyles((theme) => ({
   //   wrapper: {
@@ -44,9 +46,15 @@ const SideMenu = () => {
           },
         }}
       >
-
+        <div className="flex flex-col justify-between h-[calc(100vh_-_70px)]">
+          <Nav row={false} close={close}/>
+          <div className="mini-contacts mt-auto ">
+            {contacts.map((item) => {
+              return <ContactButton key={item.text} text={item.text} icon={item.miniIcon} link={item.link} mini={true}/>
+            })}
+          </div>
+        </div>
       </Drawer>
-
 
       <Button onClick={open}
               component={'div'}

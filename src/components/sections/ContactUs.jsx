@@ -5,26 +5,10 @@ import ContactButton from "@/components/ContactButton";
 import useMediaQueries from "@/utils/useMediaQueries";
 
 
-const ContactUs = () => {
+const ContactUs = ({contacts}) => {
   const md = useMediaQueries("md")
   const lg = useMediaQueries("lg")
-  const cantacts = [{
-    text: "Instagram", link: "#",
-    icon: <IconBrandInstagram strokeWidth={1.7} size={rem(40)}/>
-  },
-    {
-      text: "Facebook", link: "#",
-      icon: <IconBrandFacebook strokeWidth={1.7} size={rem(40)}/>
-    },
-    {
-      text: "Whatsapp", link: "#",
-      icon: <IconBrandWhatsapp strokeWidth={1.7} size={rem(40)}/>
-    },
-    {
-      text: "Telegram", link: "#",
-      icon: <IconBrandTelegram strokeWidth={1.7} size={rem(40)}/>
-    }
-  ]
+
   return (
     <>
       <div className="container relative">
@@ -43,7 +27,7 @@ const ContactUs = () => {
               <p className={"infoText font-bold"}>Пишите Юлии, она поможет!</p>
             </div>
             <div className="btns max-md:flex max-md:flex-col">
-              {cantacts.map((btn) => {
+              {contacts.map((btn) => {
                 return <div className={"inline-block max-lg:mb-[20px] mb-[30px]"}  key={btn.text}>
                   <ContactButton text={btn.text} link={btn.link} icon={btn.icon}/>
                   </div>
