@@ -58,6 +58,7 @@ export default function Home() {
           <Reviews/>
 
         </main>
+        {/*<div className="h-[100vh]"></div>*/}
         {/*<footer className="text-center py-2 text-[14px]">©Developed by Vittorio</footer>*/}
       </div>
     </>

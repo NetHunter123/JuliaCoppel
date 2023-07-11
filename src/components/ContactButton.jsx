@@ -27,15 +27,22 @@ const ContactButton = ({text, link, icon, mini = false}) => {
         '&:not([data-disabled])': theme.fn.hover({
           backgroundColor: theme.fn.darken('#C98D4E', 0.05),
         }),
-      }, inner: {
-        fontSize: "20px", fontWeight: "400", textTransform: "uppercase", fontFamily: {montserrat},
+      },
+      inner: {
+        fontSize: "20px",
+        fontWeight: "400",
+        textTransform: "uppercase",
+        fontFamily: {montserrat},
         justifyContent: "start"
       },
 
       leftIcon: {
         // fontSize: "30px", marginRight: theme.spacing.xl,
-        margin: "0 auto"
+        margin: "0 15px 0 0",
+        maxWidth: "40px !important",
+        width: "40px !important",
       },
+
     })}
   >
     {mini ? "" : text}    </Button>);
