@@ -3,6 +3,10 @@ import {useMediaQuery} from "@mantine/hooks";
 export default function (type) {
   let size = ""
 
+
+  if (type === "xs") {
+    size = "455px"
+  }
   if (type === "sm") {
     size = "640px"
   }
@@ -16,5 +20,8 @@ export default function (type) {
     size = "1140px"
   }
 
+  if (!isNaN(size)) {
+    size = type
+  }
   return useMediaQuery(`(min-width: ${size})`)
 }

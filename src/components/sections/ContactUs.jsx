@@ -18,17 +18,19 @@ const ContactUs = ({contacts}) => {
             <Image width={lg?360:md?314:300} withPlaceholder src='./contactUs.png' alt="Main Photo"/>
           </div>
 
-          <div className="info max-w-[450px] max-md:flex max-md:flex-col max-md:items-center">
+          <div className={`info
+           max-w-[450px]
+           max-w-[500px]
+           max-md:flex max-md:flex-col max-md:items-center`}>
             <div className="text-left max-md:text-center max-lg:mb-[15px] mb-[35px]">
               <h3 className="title relative z-10 text-left max-md:mb-[20px] max-md:text-center">Contacts</h3>
-              <p className="sub-title relative z-20 text-left mb-0">Tired of looking for a way out of the vicious
-                circle?
+              <p className="sub-title relative z-20 text-left mb-0">Отвечу и проконсультирую по любым вопросам, помните, нет такой ситуации, которую нельзя решить!
               </p>
-              <p className={"infoText font-bold"}>Пишите Юлии, она поможет!</p>
+              <p className={"infoText font-bold"}>Чтобы связаться со мной, отправьте мне сообщение любым удобным для Вас способом.</p>
             </div>
             <div className="btns max-md:flex max-md:flex-col">
               {contacts.map((btn) => {
-                return <div className={"inline-block max-lg:mb-[20px] mb-[30px]"}  key={btn.text}>
+                return <div className={"block max-lg:mb-[20px] mb-[30px]"}  key={btn.text}>
                   <ContactButton text={btn.text} link={btn.link} icon={btn.icon}/>
                   </div>
               })}

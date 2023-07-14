@@ -51,11 +51,11 @@ export default function Home() {
           className={"overflow-hidden"}
         >
           <Hero/>
-          <ContactUs contacts={contacts}/>
           <About/>
           <Services/>
-          <p className="remark py-[20px]">*The outcome may vary from case to case</p>
+          <p className="remark py-[20px]">*Результат может варьироваться от случая к случаю</p>
           <Reviews/>
+          <ContactUs contacts={contacts}/>
 
         </main>
         {/*<div className="h-[100vh]"></div>*/}

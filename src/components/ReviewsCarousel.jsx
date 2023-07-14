@@ -9,7 +9,8 @@ export default function ReviewsCarousel() {
   const autoplay = useRef(Autoplay({delay: 20}));
   const md = useMediaQueries("md")
   const lg = useMediaQueries("lg")
-  const slideHeight = 500
+  const xs = useMediaQueries("xs")
+  let slideHeight = xs ? 500: 450
 
   const data = [
     {image: "./feedback1.png"},
@@ -28,8 +29,8 @@ export default function ReviewsCarousel() {
       controlSize={28}
       loop
       breakpoints={[
-        { maxWidth: 'md', slideSize: '420px' },
-        // { maxWidth: 'sm', slideSize: '200px',},
+        {maxWidth: 'md', slideSize: '420px'},
+        {maxWidth: 'sm', slideSize: '390px'},
       ]}
       // nextControlIcon={<IconArrowRight size={16} />}
       // previousControlIcon={<IconArrowLeft size={16} />}
@@ -61,6 +62,7 @@ export default function ReviewsCarousel() {
 
         },
         controls: {
+          display: !xs?"none":"auto",
           left: "-50px",
           right: "-50px",
         },
@@ -78,7 +80,7 @@ export default function ReviewsCarousel() {
       {data.map((item) => <Carousel.Slide key={item.image}>
           {/*<div className="bg-[#220] w-full h-[200px]">*/}
           <div className="photo w-full mx-auto">
-            <Image height={slideHeight}   fit={"contain"} withPlaceholder src={`${item.image}`}
+            <Image height={slideHeight} fit={"contain"} withPlaceholder src={`${item.image}`}
                    alt="Main Photo"/>
           </div>
           {/*</div>*/}
