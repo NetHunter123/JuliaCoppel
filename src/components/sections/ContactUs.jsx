@@ -21,16 +21,19 @@ const ContactUs = ({contacts}) => {
           <div className={`info
            max-w-[450px]
            max-w-[500px]
-           max-md:flex max-md:flex-col max-md:items-center`}>
+           max-md:flex max-md:flex-col max-md:items-center lg:mr-[30px] max-md:mb-[25px]`}>
             <div className="text-left max-md:text-center max-lg:mb-[15px] mb-[35px]">
-              <h3 className="title relative z-10 text-left max-md:mb-[20px] max-md:text-center">Contacts</h3>
-              <p className="sub-title relative z-20 text-left mb-0">Отвечу и проконсультирую по любым вопросам, помните, нет такой ситуации, которую нельзя решить!
+              <h3 className="title relative z-10 text-left max-md:mb-[20px] text-center">Контакты для связи со мной</h3>
+              <p className="sub-title relative z-20 text-left mb-0 text-center mb-[20px]">Отвечу и проконсультирую по любым вопросам, помните, нет такой ситуации, которую нельзя решить!
               </p>
-              <p className={"infoText font-bold"}>Чтобы связаться со мной, отправьте мне сообщение любым удобным для Вас способом.</p>
+              <p className={"infoText font-bold text-center"}>Чтобы связаться со мной, отправьте мне сообщение любым удобным для Вас способом.</p>
+              {/*<p className={"infoText font-bold text-center"}>Контакты для связи со мной:</p>*/}
             </div>
-            <div className="btns max-md:flex max-md:flex-col">
+            <div className="btns flex flex-wrap gap-[10px] justify-center">
               {contacts.map((btn) => {
-                return <div className={"block max-lg:mb-[20px] mb-[30px]"}  key={btn.text}>
+                return <div className={"inline-block  w-fit"
+                  // "max-lg:mb-[20px] mb-[30px]" +
+                  }  key={btn.text}>
                   <ContactButton text={btn.text} link={btn.link} icon={btn.icon}/>
                   </div>
               })}

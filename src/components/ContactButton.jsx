@@ -17,8 +17,8 @@ const ContactButton = ({text, link, icon, mini = false}) => {
       root: {
         backgroundColor: `${mini ? '#ffffff !important' : '#C98D4E !important'}`, border: 0, color: "#000",
 
-        height: rem(mini ? 35 : 49),
-        width: rem(mini ? 35 : 240),
+        height: rem(mini ? "35px" : 49),
+        width: rem(mini ? "35px" : 240),
         padding: `${mini ? "0px" : "0 12px 0 18px"}`,
         borderRadius: `${mini ? "50%" : "4px"}`,
         marginRight: `${mini ? "10px" : "0px"}`,
@@ -29,16 +29,24 @@ const ContactButton = ({text, link, icon, mini = false}) => {
         }),
       },
       inner: {
+
+        // display:"flex",
+        // maxWidth: "max-content",
+        width: `${mini ? "30px" :  "auto"}`,
+        margin: "0 auto",
         fontSize: "20px",
         fontWeight: "400",
         textTransform: "uppercase",
         fontFamily: {montserrat},
-        justifyContent: "start"
+        justifyContent: `${mini ? "center" :  "start"}`
       },
-
+      // label: {
+      //   display: "none"
+      // },
       leftIcon: {
         // fontSize: "30px", marginRight: theme.spacing.xl,
-        margin: "0 15px 0 0",
+        margin: `${mini ? "0px" :  "0 20px 0 0"}`,
+        // margin:"0 auto",
         maxWidth: "40px !important",
         width: "40px !important",
       },
