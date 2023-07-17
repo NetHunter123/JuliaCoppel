@@ -4,13 +4,14 @@ import {Carousel} from '@mantine/carousel';
 import {rem} from "@mantine/core";
 import {Image} from "@mantine/core";
 import useMediaQueries from "@/utils/useMediaQueries";
+import Zoom from "react-medium-image-zoom";
 
 export default function ReviewsCarousel() {
   const autoplay = useRef(Autoplay({delay: 20}));
   const md = useMediaQueries("md")
   const lg = useMediaQueries("lg")
   const xs = useMediaQueries("xs")
-  let slideHeight = xs ? 500: 450
+  let slideHeight = xs ? 500 : 450
 
   const data = [
     {image: "./feedback1.png"},
@@ -62,7 +63,7 @@ export default function ReviewsCarousel() {
 
         },
         controls: {
-          display: !xs?"none":"auto",
+          display: !xs ? "none" : "auto",
           left: "-50px",
           right: "-50px",
         },
@@ -80,8 +81,10 @@ export default function ReviewsCarousel() {
       {data.map((item) => <Carousel.Slide key={item.image}>
           {/*<div className="bg-[#220] w-full h-[200px]">*/}
           <div className="photo w-full mx-auto">
-            <Image height={slideHeight} fit={"contain"} withPlaceholder src={`${item.image}`}
-                   alt="Main Photo"/>
+            <Zoom>
+              <Image height={slideHeight} fit={"contain"} withPlaceholder src={`${item.image}`}
+                     alt="Main Photo"/>
+            </Zoom>
           </div>
           {/*</div>*/}
         </Carousel.Slide>

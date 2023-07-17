@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import 'react-medium-image-zoom/dist/styles.css'
 import Head from "next/head";
 import {MantineProvider} from '@mantine/core'
 
