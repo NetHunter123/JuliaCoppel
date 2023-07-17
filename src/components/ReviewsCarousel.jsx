@@ -63,7 +63,7 @@ export default function ReviewsCarousel() {
 
         },
         controls: {
-          display: !xs ? "none" : "auto",
+          display: !md ? "none" : "auto",
           left: "-50px",
           right: "-50px",
         },

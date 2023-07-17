@@ -13,7 +13,7 @@ const Services = () => {
           <div className="max-w-[760px] mx-auto">
           </div>
         </div>
-        <div className="reviews_carousel max-w-[800px] mx-auto relative z-10">
+        <div className="reviews_carousel w-full px-[40px] max-w-[800px] max-md:px-0 mx-auto relative z-10">
           <ReviewsCarousel/>
         </div>
       </div>
