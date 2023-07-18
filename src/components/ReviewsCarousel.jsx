@@ -14,7 +14,7 @@ export default function ReviewsCarousel() {
   let slideHeight = xs ? 500 : 450
 
   const data = [
-    {image: "./feedback1.png"},
+    {image: "./feedback1.jpg"},
     {image: "./feedback2.png"},
     {image: "./feedback3.png"},
     {image: "./feedback4.png"},
