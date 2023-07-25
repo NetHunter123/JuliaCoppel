@@ -253,7 +253,7 @@ const AccordionServices = () => {
         </Accordion.Panel>
       </Accordion.Item>
       <Accordion.Item value="moneys">
-        <Accordion.Control>ЕСЛИ ФИНАНСОВИЕ ТРУДНОСТИ❗️</Accordion.Control>
+        <Accordion.Control>ФИНАНСОВЫЕ ТРУДНОСТИ ❓️</Accordion.Control>
         <Accordion.Panel>
           <p className={"mb-[25px]"}>Вам знакома ситуация, когда вы делаете все возможное, стараться изо всех сил, а
             деньги как бы намеренно проходят мимо вас?

@@ -53,7 +53,7 @@ export default function Home() {
           <Hero/>
           <About/>
           <Services/>
-          <p className="remark py-[20px]">*Результат может варьироваться от случая к случаю</p>
+          {/*<p className="remark py-[20px]">*Результат может варьироваться от случая к случаю</p>*/}
           <Reviews/>
           <ContactUs contacts={contacts}/>
 

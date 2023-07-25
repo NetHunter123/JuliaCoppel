@@ -4,7 +4,7 @@ import Link from "next/link";
 const Nav = ({row = true, close=()=>{}}) => {
 
   const links = [
-    {title: "Кто Я", path: "#about_me"},
+    {title: "Кто я", path: "#about_me"},
     {title: "Услуги", path: "#services"},
     {title: "Отзывы", path: "#reviews"},
     {title: "Контакты", path: "#contacts"},
