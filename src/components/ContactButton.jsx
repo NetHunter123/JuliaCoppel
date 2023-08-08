@@ -1,6 +1,5 @@
 import React from 'react';
 import {Image, Button, rem} from "@mantine/core";
-import {IconBrandInstagram} from '@tabler/icons-react';
 import {Montserrat} from "next/font/google";
 
 const montserrat = Montserrat({subsets: ['cyrillic']})

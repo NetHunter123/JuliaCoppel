@@ -14,22 +14,22 @@ const montserrat = Montserrat({subsets: ['cyrillic']})
 
 export default function Home() {
   const contacts = [{
-    text: "Instagram", link: "#",
+    text: "Instagram", link: "https://www.instagram.com/anna_astachowa/",
     icon: <IconBrandInstagram strokeWidth={1.7} size={rem(40)}/>,
     miniIcon: <IconBrandInstagram strokeWidth={1.7} size={rem(30)}/>
   },
     {
-      text: "Facebook", link: "#",
+      text: "Facebook", link: "https://m.me/Astachowa.Anna",
       icon: <IconBrandFacebook strokeWidth={1.7} size={rem(40)}/>,
       miniIcon: <IconBrandFacebook strokeWidth={1.7} size={rem(30)}/>
     },
     {
-      text: "Whatsapp", link: "#",
+      text: "Whatsapp", link: "https://wa.me/77478395761",
       icon: <IconBrandWhatsapp strokeWidth={1.7} size={rem(40)}/>,
       miniIcon: <IconBrandWhatsapp strokeWidth={1.7} size={rem(30)}/>
     },
     {
-      text: "Telegram", link: "#",
+      text: "Telegram", link: "https://t.me/anna_astachowa",
       icon: <IconBrandTelegram strokeWidth={1.7} size={rem(40)}/>,
       miniIcon: <IconBrandTelegram strokeWidth={1.7} size={rem(30)}/>
     }
