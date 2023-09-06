@@ -29,7 +29,7 @@ export default function Home() {
       miniIcon: <IconBrandWhatsapp strokeWidth={1.7} size={rem(30)}/>
     },
     {
-      text: "Telegram", link: "https://t.me/anna_astachowa",
+      text: "Telegram", link: "https://t.me/astachowa_anna",
       icon: <IconBrandTelegram strokeWidth={1.7} size={rem(40)}/>,
       miniIcon: <IconBrandTelegram strokeWidth={1.7} size={rem(30)}/>
     }
