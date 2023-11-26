@@ -79,10 +79,17 @@ const AccordionServices = ({ mediums }) => {
                       alt={medium.name}
                     />
                   </div>
-                  <div className="mx-auto text-center flex flex-col justify-center">
-                    <h4 className="text-[30px] max-xs:text-[24px] bold ">
+                  <div className="mx-auto text-center flex flex-col justify-center relative">
+                    <h4 className="text-[30px] max-xs:text-[24px] bold max-xs:mb-[25px] ">
                       {medium.name}
                     </h4>
+                    <div className="xs:absolute bottom-0 w-[100%] flex justify-center">
+                      {medium.chats.map((link) => {
+                        return <a href={link.link}>{link.icon}</a>;
+                      })}
+
+                      <a href={medium.chats[0].link}>{medium.chats[0].icon}</a>
+                    </div>
                   </div>
                 </div>
               </Accordion.Control>
@@ -99,7 +106,7 @@ const AccordionServices = ({ mediums }) => {
                 </p>
                 <p className={"mb-[20px]"}>
                   🔸 Получите комплексную диагностику всех сфер вашей жизни с
-                  помощью моих услуг. Я оценю ваши отношения, здоровье,
+                  помощью моих услуг. Я оценю ваши отношения, здоровье, 
                   финансовое положение и проверю на наличие негативных
                   магических воздействий. Позвольте мне помочь вам найти корень
                   ваших проблем и предложить индивидуальное решение.
