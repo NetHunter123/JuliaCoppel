@@ -16,7 +16,7 @@ const ContactUs = ({ contacts }) => {
   return (
     <>
       <div className="container relative">
-        <a id={"contacts"} className="anchor" />
+        <a id={"support"} className="anchor" />
         <div
           className={
             "flex w-full relative justify-center max-md:flex-col md:justify-between items-center py-[60px] z-10"
@@ -36,14 +36,14 @@ const ContactUs = ({ contacts }) => {
           >
             <div className="text-left max-md:text-center max-lg:mb-[15px] mb-[35px]">
               <h3 className="title relative z-10 text-left max-md:mb-[20px] text-center">
-                Контакты для связи со мной
+                Контакты для связи с поддержкой
               </h3>
               <p className="sub-title relative z-20 text-left mb-0 text-center mb-[20px]">
-                Отвечу и проконсультирую по любым вопросам, помните, нет такой
+                Ответим и проконсультируем по любым вопросам, помните, нет такой
                 ситуации, которую нельзя решить!
               </p>
               <p className={"infoText font-bold text-center"}>
-                Чтобы связаться со мной, отправьте мне сообщение любым удобным
+                Чтобы связаться с нами, отправьте нам сообщение любым удобным
                 для Вас способом.
               </p>
               {/*<p className={"infoText font-bold text-center"}>Контакты для связи со мной:</p>*/}
