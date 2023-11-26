@@ -4,7 +4,7 @@ import {useDisclosure} from "@mantine/hooks";
 import {theme} from "../../tailwind.config";
 import Nav from "@/components/Nav";
 import ContactButton from "@/components/ContactButton";
-
+ 
 const SideMenu = ({contacts}) => {
   const [opened, {open, close}] = useDisclosure(false);
   // const useStyles = createStyles((theme) => ({

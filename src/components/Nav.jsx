@@ -5,7 +5,7 @@ const Nav = ({row = true, close=()=>{}}) => {
 
   const links = [
     {title: "Кто я", path: "#about_me"},
-    {title: "Услуги", path: "#services"},
+    {title: "Медиумы", path: "#mediums"},
     {title: "Отзывы", path: "#reviews"},
     {title: "Контакты", path: "#contacts"},
   ]

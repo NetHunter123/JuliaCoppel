@@ -3,9 +3,14 @@ import {useMediaQuery} from "@mantine/hooks";
 export default function (type) {
   let size = ""
 
-
+  if (type === "425") {
+    size = "425px"
+  }
   if (type === "xs") {
     size = "455px"
+  }
+  if (type === "xsfm") {
+    size = "475px"
   }
   if (type === "sm") {
     size = "640px"
