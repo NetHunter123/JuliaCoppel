@@ -33,6 +33,7 @@ export default function Home() {
       icon: <IconBrandTelegram strokeWidth={1.7} size={rem(40)}/>,
       miniIcon: <IconBrandTelegram strokeWidth={1.7} size={rem(30)}/>
     }
+    
   ]
   return (
     <>
