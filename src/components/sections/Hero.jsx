@@ -45,8 +45,8 @@ const Hero = () => {
               /> */}
               <div className="animate-[spin_40s_linear_infinite] z-[0]">
               <Image
-                height={lg ? 384 : md ? 314 : sm?280: 260}
-                width={lg ? 384 : md ? 314 : sm?280: 260}
+                height={lg ? 384 : md ? 314 }
+                width={lg ? 384 : md ? 314 }
                 withPlaceholder
                 src="./animateCircle.png"
                 alt="animation"
