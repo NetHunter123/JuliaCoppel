@@ -53,7 +53,7 @@ export default function Home() {
           className={"overflow-hidden"}
         >
           <Hero/>
-          <About/>
+          {/* <About/> */}
           <Mediums/>
           <Services/>
           {/*<p className="remark py-[20px]">*Результат может варьироваться от случая к случаю</p>*/}
