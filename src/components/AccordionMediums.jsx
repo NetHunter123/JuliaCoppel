@@ -4,7 +4,7 @@ import { IconPlus } from "@tabler/icons-react";
 import useMediaQueries from "@/utils/useMediaQueries";
 import { Image } from "@mantine/core";
 
-const AccordionServices = ({ mediums }) => {
+const AccordionMediums = ({ mediums }) => {
   const md = useMediaQueries("md");
   const sm = useMediaQueries("sm");
   const xsfm = useMediaQueries("xsfm");
@@ -174,4 +174,4 @@ const AccordionServices = ({ mediums }) => {
     </Accordion>
   );
 };
-export default AccordionServices;
+export default AccordionMediums;

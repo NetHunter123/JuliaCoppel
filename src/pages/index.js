@@ -7,6 +7,7 @@ import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
 import Reviews from "@/components/sections/Reviews";
 import Mediums from "@/components/sections/Mediums";
+import Payment from "@/components/sections/Payment";
 import ContactUs from "@/components/sections/ContactUs";
 import {IconBrandFacebook, IconBrandInstagram, IconBrandTelegram, IconBrandWhatsapp} from "@tabler/icons-react";
 import {rem} from "@mantine/core";
@@ -55,9 +56,10 @@ export default function Home() {
           <Hero/>
           {/* <About/> */}
           <Mediums/>
-          <Services/>
+          <Payment/>
+          {/* <Services/> */}
           {/*<p className="remark py-[20px]">*Результат может варьироваться от случая к случаю</p>*/}
-          <Reviews/>
+          {/* <Reviews/> */}
           <ContactUs contacts={contacts}/>
 
         </main>

@@ -21,7 +21,7 @@ const Hero = () => {
           <div className="info max-[768px]:flex max-[768px]:flex-col max-[768px]:items-center mr-0 md:mr-[30px]">
             <h1
               className={
-                "text-primary text-[40px] lg:text-s64 font-[300] mb-[10px] max-sm:text-[38px]"
+                "text-primary leading-[40px] text-center text-[40px] lg:text-s64 font-[500] mb-[10px] max-sm:text-[38px]"
               }
             >
               Spiritual Assistance
@@ -45,8 +45,8 @@ const Hero = () => {
               /> */}
               <div className="animate-[spin_40s_linear_infinite] z-[0]">
               <Image
-                height={lg ? 384 : md ? 314 }
-                width={lg ? 384 : md ? 314 }
+                height={lg ? 384 : md ? 314 : 300}
+                width={lg ? 384 : md ? 314 : 300}
                 withPlaceholder
                 src="./animateCircle.png"
                 alt="animation"
@@ -70,13 +70,13 @@ const Hero = () => {
             <div className="info__btn flex  gap-[20px] lg:gap-[40px] max-md:mb-0 mb-[60px]">
               <Button
                 text={"Медиумы"}
-                link={"services"}
+                link={"mediums"}
                 place={"hero"}
                 variant={"outline"}
               />
               <Button
-                text={"Связаться со мной"}
-                link={"contacts"}
+                text={"Оплата"}
+                link={"payment"}
                 place={"hero"}
               />
             </div>
