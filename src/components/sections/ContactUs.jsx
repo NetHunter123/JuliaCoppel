@@ -66,6 +66,11 @@ const ContactUs = ({ contacts }) => {
                   </div>
                 );
               })}
+              <p>или свяжитесь с нами по почте:</p>
+              <a href="mailto:appsupport247@gmail.com">
+                appsupport247@gmail.com
+              </a>
+
             </div>
           </div>
         </div>

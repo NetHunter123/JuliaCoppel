@@ -26,7 +26,7 @@ const AccordionMediums = ({ mediums }) => {
         control: {
           whiteSpace: "wrap",
           wordWrap: "wrap",
-          padding: ` ${!xs?"0 0px" :!md ? "0 10px" : " 0 16px 0 20px"}`,
+          padding: ` ${!xs ? "0 0px" : !md ? "0 10px" : " 0 16px 0 20px"}`,
           color: "#C98D4E",
           "&:hover": {
             backgroundColor: "#111",
@@ -86,7 +86,14 @@ const AccordionMediums = ({ mediums }) => {
                     </h4>
                     <div className="xs:absolute bottom-0 w-[100%] flex justify-center">
                       {medium.chats.map((link) => {
-                        return <a href={link.link}>{link.icon}</a>;
+                        return (
+                          <a
+                            className="[&:not(:last-child)]:mr-[5px]"
+                            href={link.link}
+                          >
+                            {link.icon}
+                          </a>
+                        );
                       })}
                     </div>
                   </div>
@@ -94,7 +101,47 @@ const AccordionMediums = ({ mediums }) => {
               </Accordion.Control>
               <Accordion.Panel>
                 {medium.desc}
-                <a className="flex items-center relative cursor-pointer font-[500]  w-fit" href="">Связаться с медиумом <span className="ml-[5px] bottom-0 text-[30px]">→</span></a>
+                <a
+                  className="animate-pulse flex leading-[15px] items-center relative cursor-pointer font-[500] w-fit py-[8px] px-[10px] rounded-[8px] mt-[15px] bg-primary text-[black]"
+                  href={medium.chats[1].link}
+                >
+                  Связаться с медиумом
+                  <span className="flex ml-[5px] items-center h-[15px] overflow-hidden">
+                    <span className="  text-[30px] mb-[2px]">→</span>
+                  </span>
+                </a>
+                <a
+                  className="animate-bounce flex leading-[15px] items-center relative cursor-pointer font-[500] w-fit py-[8px] px-[10px] rounded-[8px] mt-[15px] bg-primary text-[black]"
+                  href={medium.chats[1].link}
+                >
+                  Связаться с медиумом
+                  <span className="flex ml-[5px] items-center h-[15px] overflow-hidden">
+                    <span className="  text-[30px] mb-[2px]">→</span>
+                  </span>
+                </a>
+                <div className="relative">
+                  <div className="absolute top-[0px] bottom-0 left-0 right-0 bg-primary animate-ping "> </div>
+
+                  <a
+                    className=" flex leading-[15px] items-center relative cursor-pointer font-[500] w-fit py-[8px] px-[10px] rounded-[8px] mt-[15px] bg-primary text-[black]"
+                    href={medium.chats[1].link}
+                  >
+                    Связаться с медиумом
+                    <span className="flex ml-[5px] items-center h-[15px] overflow-hidden">
+                      <span className="  text-[30px] mb-[2px]">→</span>
+                    </span>
+                  </a>
+                </div>
+
+                <a
+                  className="ripple flex leading-[15px] items-center relative cursor-pointer font-[500] w-fit py-[8px] px-[10px] rounded-[8px] mt-[15px] bg-primary text-[black]"
+                  href={medium.chats[1].link}
+                >
+                  Связаться с медиумом
+                  <span className="flex ml-[5px] items-center h-[15px] overflow-hidden">
+                    <span className="  text-[30px] mb-[2px]">→</span>
+                  </span>
+                </a>
                 {/* <p className={"mb-[20px]"}>
                   Сегодня хочу рассказать Вам о таком важном инструмент как таро
                   🙏 Расклад таро — это зеркало души, с его помощью я могу в

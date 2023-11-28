@@ -25,10 +25,6 @@ export default function Home() {
       text: "Telegram", link: "https://t.me/astachowa_anna",
       icon: <IconBrandTelegram strokeWidth={1.7} size={rem(40)}/>,
       miniIcon: <IconBrandTelegram strokeWidth={1.7} size={rem(30)}/>
-    },
-    {
-      text: "appsupport247", link: "https://t.me/astachowa_anna",
-      icon:"@"
     }
     
   ]
