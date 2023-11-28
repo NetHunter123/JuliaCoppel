@@ -79,6 +79,9 @@ html {
 }
 
 .ripple {
+  animation: ripple 2000ms infinite;
+}
+.zoom {
   animation: zoom 2000ms infinite;
 }
 

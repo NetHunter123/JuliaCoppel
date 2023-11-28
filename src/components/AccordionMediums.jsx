@@ -142,6 +142,16 @@ const AccordionMediums = ({ mediums }) => {
                     <span className="  text-[30px] mb-[2px]">→</span>
                   </span>
                 </a>
+
+                <a
+                  className="zoom flex leading-[15px] items-center relative cursor-pointer font-[500] w-fit py-[8px] px-[10px] rounded-[8px] mt-[15px] bg-primary text-[black]"
+                  href={medium.chats[1].link}
+                >
+                  Связаться с медиумом
+                  <span className="flex ml-[5px] items-center h-[15px] overflow-hidden">
+                    <span className="  text-[30px] mb-[2px]">→</span>
+                  </span>
+                </a>
                 {/* <p className={"mb-[20px]"}>
                   Сегодня хочу рассказать Вам о таком важном инструмент как таро
                   🙏 Расклад таро — это зеркало души, с его помощью я могу в
