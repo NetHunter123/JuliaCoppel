@@ -32,7 +32,8 @@ const Hero = () => {
                 "infoText text-[18px] lg:text-s22 mb-[25px] max-md:text-center"
               }
             >
-              Здравствуйте, это приложение которое поможет найти решение вашей проблемы или ответить на ваши вопросы
+              Здравствуйте, это приложение которое поможет найти решение вашей
+              проблемы или ответить на ваши вопросы
             </p>
             <div className="photo mb-[20px] md:hidden">
               {/* <Image
@@ -43,14 +44,14 @@ const Hero = () => {
                 alt="Main Photo"
               /> */}
               <div className="animate-[spin_40s_linear_infinite] z-[0]">
-              <Image
-                height={lg ? 384 : md ? 314 : 300}
-                width={lg ? 384 : md ? 314 : 300}
-                withPlaceholder
-                src="./animateCircle.png"
-                alt="animation"
-              />
-            </div>
+                <Image
+                  height={lg ? 384 : md ? 314 : 300}
+                  width={lg ? 384 : md ? 314 : 300}
+                  withPlaceholder
+                  src="./animateCircle.png"
+                  alt="animation"
+                />
+              </div>
             </div>
             {/* <p
               className={
@@ -66,18 +67,22 @@ const Hero = () => {
             >
               Для решения или обсуждения проблемы свяжитесь с одним из Медиумом
             </p>
-            <div className="info__btn flex  gap-[20px] lg:gap-[40px] max-md:mb-0 mb-[60px]">
+
+            <div className="info__btn flex justify-center gap-[20px] lg:gap-[40px] max-md:mb-0 mb-[60px] ">
               {/* <Button
                 text={"Записатся на сеанс!"}
                 link={"#"}
                 place={"hero"}
                 variant={"outline"}
               /> */}
-              <Button
-                text={"Записатся на сеанс!"}
-                link={"#"}
-                place={"hero"}
-              />
+              <div className="relative">
+                <div className="animate-ping max-w-[200px] absolute top-[0px] bottom-0 left-0 right-0 bg-primary rounded-[10px] z-0 "></div>
+                <Button
+                  text={"Записатся на сеанс!"}
+                  link={"#"}
+                  place={"hero"}
+                />
+              </div>
             </div>
           </div>
 

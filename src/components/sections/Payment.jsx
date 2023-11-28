@@ -52,7 +52,7 @@ const Payment = ({}) => {
             <div className="btns flex flex-wrap gap-[10px] justify-center">
               {/* <Button text={"Оплата"} link={"payment"} place={"hero"} /> */}
               <a
-                className={`block text-center  bg-primary text-textBlack h-btn text-[22px] min-w-[260px] w-[100%]  px-[10px] rounded-md leading-btn font-medium`}
+                className={`animate-bounce block text-center   bg-primary text-textBlack h-btn text-[22px] min-w-[260px] w-[100%]  px-[10px] rounded-md leading-btn font-medium`}
                 href={`#`}
               >
                 {"Оплата"}
