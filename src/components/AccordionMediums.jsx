@@ -94,6 +94,7 @@ const AccordionMediums = ({ mediums }) => {
               </Accordion.Control>
               <Accordion.Panel>
                 {medium.desc}
+                <a className="flex items-center relative cursor-pointer font-[500]  w-fit" href="">Связаться с медиумом <span className="ml-[5px] bottom-0 text-[30px]">→</span></a>
                 {/* <p className={"mb-[20px]"}>
                   Сегодня хочу рассказать Вам о таком важном инструмент как таро
                   🙏 Расклад таро — это зеркало души, с его помощью я могу в
