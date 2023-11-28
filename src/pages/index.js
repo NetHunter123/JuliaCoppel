@@ -15,16 +15,7 @@ import {rem} from "@mantine/core";
 const montserrat = Montserrat({subsets: ['cyrillic']})
 
 export default function Home() {
-  const contacts = [{
-    text: "Instagram", link: "https://www.instagram.com/anna_astachowa/",
-    icon: <IconBrandInstagram strokeWidth={1.7} size={rem(40)}/>,
-    miniIcon: <IconBrandInstagram strokeWidth={1.7} size={rem(30)}/>
-  },
-    {
-      text: "Facebook", link: "https://m.me/Astachowa.Anna",
-      icon: <IconBrandFacebook strokeWidth={1.7} size={rem(40)}/>,
-      miniIcon: <IconBrandFacebook strokeWidth={1.7} size={rem(30)}/>
-    },
+  const contacts = [
     {
       text: "Whatsapp", link: "https://wa.me/77478395761",
       icon: <IconBrandWhatsapp strokeWidth={1.7} size={rem(40)}/>,
@@ -34,6 +25,10 @@ export default function Home() {
       text: "Telegram", link: "https://t.me/astachowa_anna",
       icon: <IconBrandTelegram strokeWidth={1.7} size={rem(40)}/>,
       miniIcon: <IconBrandTelegram strokeWidth={1.7} size={rem(30)}/>
+    },
+    {
+      text: "appsupport247", link: "https://t.me/astachowa_anna",
+      icon:"@"
     }
     
   ]
@@ -48,7 +43,7 @@ export default function Home() {
             <Header/>
           </div>
         </div>
-        <div className="h-[60px] md:h-[130px] "></div>
+        <div className="h-[60px] md:h-[130px] max-sm:h-[10px]"></div>
         <main
           // className={`flex min-h-screen flex-col items-center justify-between p-24 ${montserrat.className}`}
           className={"overflow-hidden"}

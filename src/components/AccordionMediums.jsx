@@ -8,6 +8,7 @@ const AccordionMediums = ({ mediums }) => {
   const md = useMediaQueries("md");
   const sm = useMediaQueries("sm");
   const xsfm = useMediaQueries("xsfm");
+  const xs = useMediaQueries("xs");
   const uxs = useMediaQueries("425");
 
   console.log("mediums", mediums);
@@ -25,7 +26,7 @@ const AccordionMediums = ({ mediums }) => {
         control: {
           whiteSpace: "wrap",
           wordWrap: "wrap",
-          padding: ` ${!md ? "0 10px" : " 0 16px 0 20px"}`,
+          padding: ` ${!xs?"0 0px" :!md ? "0 10px" : " 0 16px 0 20px"}`,
           color: "#C98D4E",
           "&:hover": {
             backgroundColor: "#111",
@@ -70,7 +71,7 @@ const AccordionMediums = ({ mediums }) => {
             <Accordion.Item value={`${medium.value}`}>
               <Accordion.Control>
                 <div className="flex justify-between ">
-                  <div className="h-[150px] max-w-[150px] max-xs:h-[100px] max-xs:w-[100px] w-[100%] bg-[#ffffff] rounded-[75px] ml-[50px] max-sm:ml-[30px] max-xs:ml-[0]  overflow-hidden">
+                  <div className="h-[150px] max-w-[150px] max-xs:h-[100px] max-xs:max-w-[100px] w-[100%] bg-[#ffffff] rounded-[75px] ml-[50px] max-sm:ml-[30px] max-xs:ml-[0] overflow-hidden">
                     <Image
                       width={!xsfm ? 100 : 150}
                       fit={"contain"}
@@ -80,21 +81,20 @@ const AccordionMediums = ({ mediums }) => {
                     />
                   </div>
                   <div className="mx-auto text-center flex flex-col justify-center relative">
-                    <h4 className="text-[30px] max-xs:text-[24px] bold max-xs:mb-[25px] ">
+                    <h4 className="text-[30px] max-xs:text-[20px]  bold max-xs:mb-[25px] ">
                       {medium.name}
                     </h4>
                     <div className="xs:absolute bottom-0 w-[100%] flex justify-center">
                       {medium.chats.map((link) => {
                         return <a href={link.link}>{link.icon}</a>;
                       })}
-
-                      <a href={medium.chats[0].link}>{medium.chats[0].icon}</a>
                     </div>
                   </div>
                 </div>
               </Accordion.Control>
               <Accordion.Panel>
-                <p className={"mb-[20px]"}>
+                {medium.desc}
+                {/* <p className={"mb-[20px]"}>
                   Сегодня хочу рассказать Вам о таком важном инструмент как таро
                   🙏 Расклад таро — это зеркало души, с его помощью я могу в
                   полной мере проанализировать Вашу ситуацию, а после предложить
@@ -119,7 +119,7 @@ const AccordionMediums = ({ mediums }) => {
                   найти правильное решение. А после диагностики мы можем сразу
                   перейти к действиям. Чтобы заказать диагностику - пишите мне в
                   личные сообщения.
-                </p>
+                </p> */}
               </Accordion.Panel>
             </Accordion.Item>
           </>

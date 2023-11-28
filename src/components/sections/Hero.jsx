@@ -21,7 +21,7 @@ const Hero = () => {
           <div className="info max-[768px]:flex max-[768px]:flex-col max-[768px]:items-center mr-0 md:mr-[30px]">
             <h1
               className={
-                "text-primary leading-[40px] text-center text-[40px] lg:text-s64 font-[500] mb-[10px] max-sm:text-[38px]"
+                "text-primary leading-[40px] text-center text-[40px] lg:text-s64 font-[500] mb-[10px] max-sm:text-[38px] max-[502px]:max-w-[200px] max-xs:w-[100%]"
               }
             >
               Spiritual Assistance
@@ -32,8 +32,7 @@ const Hero = () => {
                 "infoText text-[18px] lg:text-s22 mb-[25px] max-md:text-center"
               }
             >
-              Здравствуйте это твое приложение которое поможет тебе найти
-              решение или помощь в твоей ситуации
+              Здравствуйте, это приложение которое поможет найти решение вашей проблемы или ответить на ваши вопросы
             </p>
             <div className="photo mb-[20px] md:hidden">
               {/* <Image
@@ -53,30 +52,30 @@ const Hero = () => {
               />
             </div>
             </div>
-            <p
+            {/* <p
               className={
                 "infoText max-[768px]:text-center text-[16px] lg:text-[18px] whitespace-pre-wrap w-full"
               }
             >
               Для обсуждения проблемы свяжитесь с одним из Медиумом
-            </p>
+            </p> */}
             <p
               className={
-                "infoText max-[768px]:mb-5 text-[16px] lg:text-[18px] font-bold md:mb-[20px] lg:mb-[40px]"
+                "infoText max-[768px]:mb-5 text-[16px] lg:text-[18px] font-bold md:mb-[20px] lg:mb-[40px] text-center"
               }
             >
-              Запишитесь на консультацию!
+              Для решения или обсуждения проблемы свяжитесь с одним из Медиумом
             </p>
             <div className="info__btn flex  gap-[20px] lg:gap-[40px] max-md:mb-0 mb-[60px]">
-              <Button
-                text={"Медиумы"}
-                link={"mediums"}
+              {/* <Button
+                text={"Записатся на сеанс!"}
+                link={"#"}
                 place={"hero"}
                 variant={"outline"}
-              />
+              /> */}
               <Button
-                text={"Оплата"}
-                link={"payment"}
+                text={"Записатся на сеанс!"}
+                link={"#"}
                 place={"hero"}
               />
             </div>

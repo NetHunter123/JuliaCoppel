@@ -33,7 +33,7 @@ const ContactButton = ({text, link, icon, mini = false}) => {
         // maxWidth: "max-content",
         width: `${mini ? "30px" :  "auto"}`,
         margin: "0 auto",
-        fontSize: "20px",
+        fontSize: "18px",
         fontWeight: "400",
         textTransform: "uppercase",
         fontFamily: {montserrat},
