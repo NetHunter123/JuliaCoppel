@@ -10,6 +10,9 @@ import ContactUs from "@/components/sections/ContactUs";
 import {IconBrandFacebook, IconBrandInstagram, IconBrandTelegram, IconBrandWhatsapp} from "@tabler/icons-react";
 import {rem} from "@mantine/core";
 import Hotjar from '@hotjar/browser';
+import {useEffect, useState} from "react";
+// import { gtag } from 'gtag/react';
+
 
 const siteId = 3802078;
 const hotjarVersion = 6;
@@ -19,8 +22,45 @@ const montserrat = Montserrat({subsets: ['cyrillic']})
 export default function Home() {
   Hotjar.init(siteId, hotjarVersion);
 
+  // const [conversionHappened, setConversionHappened] = useState(false);
+  //
+  // useEffect(() => {
+  //   window.dataLayer = window.dataLayer || [];
+  //   function gtag(){dataLayer.push(arguments);}
+  //   gtag('js', new Date());
+  //   gtag('config', 'AW-11451210787');
+  // }, [])
+  //
+  // function handleClick() {
+  //   setConversionHappened(true);
+  //   window.location = '/thank-you';
+  // }
+  //
+  // useEffect(() => {
+  //   if(conversionHappened) {
+  //     gtag_report_conversion('/thank-you');
+  //   }
+  // }, [conversionHappened]);
+
+  function gtag_report_conversion(url) {
+    let callback = function () {
+      if (typeof (url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    if (typeof window.gtag !== 'undefined') {
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-11451210787/awfyCLaHtIEZEKO4rtQq',
+        'event_callback': callback
+      });
+    }
+    return false;
+  }
+
+
   const contacts = [{
-    text: "Instagram", link: "https://www.instagram.com/anna_astahova1shsjdbsndn?igshid=YzVkODRmOTdmMw%3D%3D&utm_source=qr",
+    text: "Instagram",
+    link: "https://www.instagram.com/anna_astahova1shsjdbsndn?igshid=YzVkODRmOTdmMw%3D%3D&utm_source=qr",
     icon: <IconBrandInstagram strokeWidth={1.7} size={rem(40)}/>,
     miniIcon: <IconBrandInstagram strokeWidth={1.7} size={rem(30)}/>
   },
@@ -57,7 +97,7 @@ export default function Home() {
           // className={`flex min-h-screen flex-col items-center justify-between p-24 ${montserrat.className}`}
           className={"overflow-hidden"}
         >
-          <Hero/>
+          <Hero pixel={gtag_report_conversion}/>
           <About/>
           <Services/>
           {/*<p className="remark py-[20px]">*Результат может варьироваться от случая к случаю</p>*/}
