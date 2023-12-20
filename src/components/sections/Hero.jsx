@@ -28,8 +28,8 @@ const Hero = () => {
               className={"infoText max-[768px]:mb-5 text-[16px] lg:text-[18px] font-bold md:mb-[20px] lg:mb-[40px]"}>Запишитесь
               на консультацию!</p>
             <div className="info__btn flex  gap-[20px] lg:gap-[40px] max-md:mb-0 mb-[60px]">
-              <Button text={"Услуги"} link={"services"} place={"hero"} variant={"outline"}/>
-              <Button text={"Связаться со мной"} link={"contacts"}  place={"hero"}/>
+              <Button text={"Услуги"} link={"#services"} place={"hero"} variant={"outline"}/>
+              <Button text={"Связаться со мной"} link={"https://wa.me/77758316104"}  place={"hero"}/>
             </div>
           </div>
 

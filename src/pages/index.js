@@ -9,10 +9,16 @@ import Reviews from "@/components/sections/Reviews";
 import ContactUs from "@/components/sections/ContactUs";
 import {IconBrandFacebook, IconBrandInstagram, IconBrandTelegram, IconBrandWhatsapp} from "@tabler/icons-react";
 import {rem} from "@mantine/core";
+import Hotjar from '@hotjar/browser';
+
+const siteId = 3802078;
+const hotjarVersion = 6;
 
 const montserrat = Montserrat({subsets: ['cyrillic']})
 
 export default function Home() {
+  Hotjar.init(siteId, hotjarVersion);
+
   const contacts = [{
     text: "Instagram", link: "https://www.instagram.com/anna_astahova1shsjdbsndn?igshid=YzVkODRmOTdmMw%3D%3D&utm_source=qr",
     icon: <IconBrandInstagram strokeWidth={1.7} size={rem(40)}/>,
@@ -33,7 +39,7 @@ export default function Home() {
       icon: <IconBrandTelegram strokeWidth={1.7} size={rem(40)}/>,
       miniIcon: <IconBrandTelegram strokeWidth={1.7} size={rem(30)}/>
     }
-    
+
   ]
   return (
     <>
