@@ -2,12 +2,19 @@ import '@/styles/globals.css'
 import 'react-medium-image-zoom/dist/styles.css'
 import Head from "next/head";
 import {MantineProvider} from '@mantine/core'
+import {useEffect} from "react";
+import {gtag} from "ga-gtag";
 
 
 export default function App({Component, pageProps}) {
+
+// useEffect(()=>{
+//   window.dataLayer = window.dataLayer || [];
+// })
+
   return <>
     <Head>
-      <title>Page title</title>
+      <title>Anna Sokolova</title>
       <meta
         name='viewport'
         content='minimum-scale=1, initial-scale=1, width=device-width'

@@ -10,7 +10,11 @@ import ContactUs from "@/components/sections/ContactUs";
 import {IconBrandFacebook, IconBrandInstagram, IconBrandTelegram, IconBrandWhatsapp} from "@tabler/icons-react";
 import {rem} from "@mantine/core";
 import Hotjar from '@hotjar/browser';
+import Script from 'next/script'
+
 import {useEffect, useState} from "react";
+import {gtag} from "ga-gtag";
+import Head from "next/head";
 // import { gtag } from 'gtag/react';
 
 
@@ -43,18 +47,18 @@ export default function Home() {
   // }, [conversionHappened]);
 
   function gtag_report_conversion(url) {
-    let callback = function () {
-      if (typeof (url) != 'undefined') {
-        window.location = url;
-      }
-    };
-    if (typeof window.gtag !== 'undefined') {
-      window.gtag('event', 'conversion', {
-        'send_to': 'AW-11451210787/awfyCLaHtIEZEKO4rtQq',
-        'event_callback': callback
-      });
-    }
-    return false;
+    // let callback = function () {
+    //   if (typeof (url) != 'undefined') {
+    //     window.location = url;
+    //   }
+    // };
+    // // if (typeof window.gtag !== 'undefined') {
+    //   gtag('event', 'conversion', {
+    //     'send_to': 'AW-11451210787/awfyCLaHtIEZEKO4rtQq',
+    //     'event_callback': callback
+    //   });
+    // // }
+    // return false;
   }
 
 
@@ -81,8 +85,19 @@ export default function Home() {
     }
 
   ]
+  // useEffect(() => {
+  //   window.dataLayer = window.dataLayer || [];
+  // })
   return (
     <>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11451210787"></Script>
+      <Script id="google-analytics">{`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)}
+        gtag('js', new Date());
+        gtag('config', 'AW-11451210787');`}
+      </Script>
+
       <div className={`bg-bgDark text-primary min-h-screen  ${montserrat.className}`}>
         <div className="fixed top-0 left-0 right-0 bg-bgDark z-20">
           <div className="fixed right-[10px]  top-[10px] md:hidden ">
