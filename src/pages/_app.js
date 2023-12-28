@@ -13,13 +13,29 @@ export default function App({Component, pageProps}) {
 // })
 
   return <>
-    <Head>
+    <head dangerouslySetInnerHTML={{
+      __html: `
       <title>Anna Sokolova</title>
       <meta
-        name='viewport'
-        content='minimum-scale=1, initial-scale=1, width=device-width'
+      name='viewport'
+      content='minimum-scale=1, initial-scale=1, width=device-width'
       />
-    </Head>
+
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11451210787"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'AW-11451210787');
+      </script>
+    `
+    }}/>
+
+    {/*<head>*/}
+    {/*  <title>Anna Sokolova</title>*/}
+    {/*</head>*/}
 
     <MantineProvider
       withGlobalStyles

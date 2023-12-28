@@ -23,7 +23,7 @@ const hotjarVersion = 6;
 
 const montserrat = Montserrat({subsets: ['cyrillic']})
 
-export default function Home() {
+export default function Home({copiedDataLayer}) {
   Hotjar.init(siteId, hotjarVersion);
 
   // const [conversionHappened, setConversionHappened] = useState(false);
@@ -88,15 +88,61 @@ export default function Home() {
   // useEffect(() => {
   //   window.dataLayer = window.dataLayer || [];
   // })
+
+//   useEffect(() => {
+//     return(<>
+//     <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-11451210787"></Script>
+//     <Script>
+//       window.dataLayer = ${JSON.stringify(copiedDataLayer)};
+//       function gtag(){dataLayer.push(arguments)}
+//       gtag('js', new Date());
+
+//       gtag('config', 'AW-11451210787');
+//     </Script>
+//     </>)
+// },[])
+
+
+// <!-- Event snippet for click conversion page
+// In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+//     <script>
+//     function gtag_report_conversion(url) {
+//       var callback = function () {
+//         if (typeof(url) != 'undefined') {
+//           window.location = url;
+//         }
+//       };
+//       gtag('event', 'conversion', {
+//         'send_to': 'AW-11451210787/1EaLCLbX14EZEKO4rtQq',
+//         'event_callback': callback
+//       });
+//       return false;
+//     }
+// </script>
+
+  // function gtag_report_conversion(url) {
+  //   var callback = function () {
+  //     if (typeof (url) != 'undefined') {
+  //       window.location = url;
+  //     }
+  //   };
+  //   gtag('event', 'conversion', {
+  //     'send_to': 'AW-11451210787/1EaLCLbX14EZEKO4rtQq',
+  //     'event_callback': callback
+  //   });
+  //   return false;
+  // }
+
   return (
     <>
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-11451210787"></Script>
-      <Script id="google-analytics">{`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)}
-        gtag('js', new Date());
-        gtag('config', 'AW-11451210787');`}
-      </Script>
+
+      {/*<Script async src="https://www.googletagmanager.com/gtag/js?id=AW-11451210787"></Script>*/}
+      {/*<Script id="google-analytics">{`*/}
+      {/*  window.dataLayer = window.dataLayer || [];*/}
+      {/*  function gtag(){dataLayer.push(arguments)}*/}
+      {/*  gtag('js', new Date());*/}
+      {/*  gtag('config', 'AW-11451210787');`}*/}
+      {/*</Script>*/}
 
       <div className={`bg-bgDark text-primary min-h-screen  ${montserrat.className}`}>
         <div className="fixed top-0 left-0 right-0 bg-bgDark z-20">
@@ -112,7 +158,8 @@ export default function Home() {
           // className={`flex min-h-screen flex-col items-center justify-between p-24 ${montserrat.className}`}
           className={"overflow-hidden"}
         >
-          <Hero pixel={gtag_report_conversion}/>
+          {/*<button onClick={gtag_report_conversion("https://wa.me/77758316104")}>Клікай сука і пробуй</button>*/}
+          <Hero pixel={()=>{}}/>
           <About/>
           <Services/>
           {/*<p className="remark py-[20px]">*Результат может варьироваться от случая к случаю</p>*/}
@@ -126,3 +173,18 @@ export default function Home() {
     </>
   )
 }
+
+// export async function getServerSideProps() {
+
+//   // Initialize dataLayer
+//   // const dataLayer = [];
+//   const copiedDataLayer = [...dataLayer];
+
+
+//   return {
+//     props: {
+//       copiedDataLayer
+//     }, // will be passed to the page component as props
+//   }
+
+// }
