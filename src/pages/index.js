@@ -46,20 +46,20 @@ export default function Home({copiedDataLayer}) {
   //   }
   // }, [conversionHappened]);
 
-  function gtag_report_conversion(url) {
-    // let callback = function () {
-    //   if (typeof (url) != 'undefined') {
-    //     window.location = url;
-    //   }
-    // };
-    // // if (typeof window.gtag !== 'undefined') {
-    //   gtag('event', 'conversion', {
-    //     'send_to': 'AW-11451210787/awfyCLaHtIEZEKO4rtQq',
-    //     'event_callback': callback
-    //   });
-    // // }
-    // return false;
-  }
+  // function gtag_report_conversion(url) {
+  // let callback = function () {
+  //   if (typeof (url) != 'undefined') {
+  //     window.location = url;
+  //   }
+  // };
+  // // if (typeof window.gtag !== 'undefined') {
+  //   gtag('event', 'conversion', {
+  //     'send_to': 'AW-11451210787/awfyCLaHtIEZEKO4rtQq',
+  //     'event_callback': callback
+  //   });
+  // // }
+  // return false;
+  // }
 
 
   const contacts = [{
@@ -132,7 +132,9 @@ export default function Home({copiedDataLayer}) {
   //   });
   //   return false;
   // }
-
+  const handleClick = () => {
+     gtag_report_conversion('https://wa.me/77758316104')
+  }
   return (
     <>
 
@@ -158,8 +160,11 @@ export default function Home({copiedDataLayer}) {
           // className={`flex min-h-screen flex-col items-center justify-between p-24 ${montserrat.className}`}
           className={"overflow-hidden"}
         >
-          {/*<button onClick={gtag_report_conversion("https://wa.me/77758316104")}>Клікай сука і пробуй</button>*/}
-          <Hero pixel={()=>{}}/>
+          {/*<Suspense fallback={<Loader/>}>*/}
+            <button onClick={handleClick}>Клікай сука і пробуй</button>
+          {/*</Suspense>*/}
+          <Hero pixel={() => {
+          }}/>
           <About/>
           <Services/>
           {/*<p className="remark py-[20px]">*Результат может варьироваться от случая к случаю</p>*/}
